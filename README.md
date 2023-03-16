@@ -8,6 +8,8 @@ The forwarding plane of rvs is inspired by [VALE](https://dl.acm.org/doi/10.1145
 
 The primary motivation of rvs is to have the simplest implementation of a high-performance virtual switch, which does not depend on external libraries; netmap is highly flexible and sophisticated, however, it is sometimes too much for small tests and requires a bit of engineering to port specific components (e.g., the packet switching logic of VALE) to other environments (e.g., running the VALE switch in user-space, rather than in the kernel).
 
+A DPDK poll mode driver (pmd) for rvif is found at [https://github.com/yasukata/librte_pmd_rvif](https://github.com/yasukata/librte_pmd_rvif).
+
 ## How to use
 
 This repository contains two example applications: an rvs packet forwarder (apps/fwd) and a packet generator (apps/pkt-gen).
